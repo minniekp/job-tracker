@@ -9,7 +9,7 @@
 },
 "dependencies": {
 "@heroicons/react": "^2.0.18",
-"@hello-pangea/dnd": "^13.1.0",
+"@hello-pangea/dnd": "^13.2.0",
 "axios": "^1.4.0",
 "firebase": "^9.22.2",
 "react": "^18.2.0",
