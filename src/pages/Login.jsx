@@ -24,18 +24,21 @@ setError('Failed to sign in')
 
 
 return (
-<div className="flex items-center justify-center min-h-screen">
-<div className="bg-white p-8 rounded shadow w-full max-w-md">
-<h2 className="text-2xl font-semibold mb-4">Sign in</h2>
-{error && <div className="text-red-500 mb-2">{error}</div>}
+<div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+<div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md border border-gray-100">
+<div className="text-center mb-6">
+<h2 className="text-3xl font-bold text-gray-800 mb-2">Welcome Back</h2>
+<p className="text-gray-500 text-sm">Sign in to continue to your job tracker</p>
+</div>
+{error && <div className="bg-red-50 text-red-600 p-3 rounded-lg mb-4 text-sm">{error}</div>}
 <form onSubmit={handleSubmit}>
-<label className="block mb-2">Email</label>
-<input ref={emailRef} className="w-full p-2 border rounded mb-4" type="email" required />
-<label className="block mb-2">Password</label>
-<input ref={passRef} className="w-full p-2 border rounded mb-4" type="password" required />
-<button className="w-full bg-blue-600 text-white py-2 rounded">Sign in</button>
+<label className="block mb-2 text-sm font-medium text-gray-700">Email</label>
+<input ref={emailRef} className="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition" type="email" required placeholder="you@example.com" />
+<label className="block mb-2 text-sm font-medium text-gray-700">Password</label>
+<input ref={passRef} className="w-full p-3 border border-gray-300 rounded-lg mb-6 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition" type="password" required placeholder="••••••••" />
+<button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3 rounded-lg font-medium transition duration-200 shadow-lg hover:shadow-xl">Sign in</button>
 </form>
-<p className="mt-4 text-sm">Don't have an account? <Link to="/signup" className="text-blue-600">Sign up</Link></p>
+<p className="mt-6 text-center text-sm text-gray-600">Don't have an account? <Link to="/signup" className="text-blue-600 hover:text-blue-700 font-medium">Sign up</Link></p>
 </div>
 </div>
 )

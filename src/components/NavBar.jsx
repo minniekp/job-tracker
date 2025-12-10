@@ -14,15 +14,15 @@ window.location.href = '/login'
 
 
 return (
-<nav className="bg-white shadow">
-<div className="container mx-auto px-4 py-3 flex justify-between items-center">
-<Link to="/" className="font-bold text-lg">Job Tracker</Link>
-<div className="flex items-center gap-4">
-<Link to="/board" className="text-gray-700">Board</Link>
+<nav className="bg-white shadow-md border-b border-gray-100">
+<div className="container mx-auto px-6 py-4 flex justify-between items-center">
+<Link to="/" className="font-bold text-2xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Job Tracker</Link>
+<div className="flex items-center gap-6">
+<Link to="/board" className="text-gray-700 hover:text-blue-600 font-medium transition">Board</Link>
 {currentUser ? (
-<button onClick={handleLogout} className="text-red-500">Logout</button>
+<button onClick={handleLogout} className="px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg font-medium transition">Logout</button>
 ) : (
-<Link to="/login" className="text-blue-600">Login</Link>
+<Link to="/login" className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Login</Link>
 )}
 </div>
 </div>
